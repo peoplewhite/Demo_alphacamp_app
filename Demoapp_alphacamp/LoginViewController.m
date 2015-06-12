@@ -43,20 +43,8 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-        UsernameViewController *usernameVC = segue.destinationViewController;
-        usernameVC.strShowUsername = self.tfUsername.text;
-//    if (self.tfUsername.text == strUsername) {
-//        // 可登入
-//        
-//        UsernameViewController *usernameVC = segue.destinationViewController;
-//        usernameVC.strShowUsername = self.tfUsername.text;
-//        
-//    }
-//    else {
-//        //不可登入
-//        return 0;
-//    }
-    
+    UsernameViewController *usernameVC = segue.destinationViewController;
+    usernameVC.strShowUsername = self.tfUsername.text;
 }
 
 
