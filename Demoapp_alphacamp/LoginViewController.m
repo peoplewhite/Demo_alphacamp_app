@@ -85,11 +85,6 @@
 //    }
 }
 
-- (IBAction)test:(id)sender
-{
-
-    
-}
 /*
 #pragma mark - Navigation
 
