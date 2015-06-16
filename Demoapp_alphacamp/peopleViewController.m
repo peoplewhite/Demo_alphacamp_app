@@ -15,8 +15,9 @@
     NSDictionary *dictGoodStudents;
     
     NSArray *arrTeamCoreMember;
-//    NSDictionary *dictTeacher;
-//    NSDictionary *dictGoodStudents;
+    NSArray *arrTeacher;
+    NSArray *arrGoodStudents;
+    NSArray *arr; //最後的集合
     
     NSDictionary *people_Bernard;
     NSDictionary *people_ihower;
@@ -25,8 +26,23 @@
     NSDictionary *people_Evelyn;
     NSDictionary *people_Benson;
     
-    int changeNum;
+    NSDictionary *people_Edward;
+    NSDictionary *people_Brian;
+    NSDictionary *people_Shyne;
+    NSDictionary *people_Amos;
+    NSDictionary *people_Peter;
     
+    
+    NSDictionary *people_Anthony;
+    NSDictionary *people_Abby;
+    NSDictionary *people_Reinhardt;
+    NSDictionary *people_Amos_Chen;
+    NSDictionary *people_Winnie;
+    NSDictionary *people_David;
+    NSDictionary *people_A_Ga;
+    
+    int changeNum;
+    int groupNum;
     
 }
 
@@ -38,6 +54,7 @@
     [super viewDidLoad];
     
     changeNum = 0;
+    groupNum = 0;
     people_Bernard = @{@"Name" : @"Bernard Chan",
                        @"Photo" : [UIImage imageNamed:@"photo_Bernard"],
                        @"Description" : @"TMI 駐場創業家，曾任Yahoo！亞太區廣告業務總監。出生香港，麻省理工學院 Sloan商學院 MBA 畢業，芝加哥 Ruby on Rails課程研習，在美國，北京，香港有多次Startup經驗。"};
@@ -64,10 +81,66 @@
                           people_Evelyn,
                           people_Benson];
     
-    showPhoto.image = arrTeamCoreMember[0][@"Photo"];
-    showName.text = arrTeamCoreMember[0][@"Name"];
-    showDescription.text = arrTeamCoreMember[0][@"Description"];
     
+    people_Edward = @{@"Name" : @"Edward Chiang",
+                       @"Photo" : [UIImage imageNamed:@"photo_Edward_Chiang"],
+                       @"Description" : @"政大財政系，在Startup圈闖蕩的小朋友，從大四開始自學Web Development，是Rails的初學者，立志稱爲行銷和技術兼備的人才，目前在ALPHA Camp愉快的玩耍中。"};
+    people_Brian = @{@"Name" : @"Brian Fang",
+                       @"Photo" : [UIImage imageNamed:@"photo_Brian_Fang"],
+                       @"Description" : @"政大財政系，在Startup圈闖蕩的小朋友，從大四開始自學Web Development，是Rails的初學者，立志稱爲行銷和技術兼備的人才，目前在ALPHA Camp愉快的玩耍中。"};
+    people_Shyne = @{@"Name" : @"Shyne Tseng",
+                       @"Photo" : [UIImage imageNamed:@"photo_Shyne_Tseng"],
+                       @"Description" : @"政大財政系，在Startup圈闖蕩的小朋友，從大四開始自學Web Development，是Rails的初學者，立志稱爲行銷和技術兼備的人才，目前在ALPHA Camp愉快的玩耍中。"};
+    people_Amos = @{@"Name" : @"Amos Lee",
+                       @"Photo" : [UIImage imageNamed:@"photo_Amos_Lee"],
+                       @"Description" : @"政大財政系，在Startup圈闖蕩的小朋友，從大四開始自學Web Development，是Rails的初學者，立志稱爲行銷和技術兼備的人才，目前在ALPHA Camp愉快的玩耍中。"};
+    people_Peter = @{@"Name" : @"Peter Pan",
+                       @"Photo" : [UIImage imageNamed:@"photo_Peter_Pan"],
+                       @"Description" : @"政大財政系，在Startup圈闖蕩的小朋友，從大四開始自學Web Development，是Rails的初學者，立志稱爲行銷和技術兼備的人才，目前在ALPHA Camp愉快的玩耍中。"};
+    
+    arrTeacher = @[people_ihower,
+                   people_Edward,
+                   people_Brian,
+                   people_Shyne,
+                   people_Amos,
+                   people_Peter];
+    
+    
+    people_Anthony = @{@"Name" : @"Anthony Liu",
+                       @"Photo" : [UIImage imageNamed:@"photo_Anthony_Liu"],
+                       @"Description" : @"政大財政系，在Startup圈闖蕩的小朋友，從大四開始自學Web Development，是Rails的初學者，立志稱爲行銷和技術兼備的人才，目前在ALPHA Camp愉快的玩耍中。"};
+    people_Abby = @{@"Name" : @"Abby Hsu",
+                       @"Photo" : [UIImage imageNamed:@"photo_Abby_Hsu"],
+                       @"Description" : @"政大財政系，在Startup圈闖蕩的小朋友，從大四開始自學Web Development，是Rails的初學者，立志稱爲行銷和技術兼備的人才，目前在ALPHA Camp愉快的玩耍中。"};
+//    people_Reinhardt = @{@"Name" : @"Reinhardt Lin",
+//                       @"Photo" : [UIImage imageNamed:@"photo_reinhardt_Lin"],
+//                       @"Description" : @"政大財政系，在Startup圈闖蕩的小朋友，從大四開始自學Web Development，是Rails的初學者，立志稱爲行銷和技術兼備的人才，目前在ALPHA Camp愉快的玩耍中。"};
+    people_Amos_Chen = @{@"Name" : @"Amos_Chen",
+                       @"Photo" : [UIImage imageNamed:@"photo_Amos_Chen"],
+                       @"Description" : @"政大財政系，在Startup圈闖蕩的小朋友，從大四開始自學Web Development，是Rails的初學者，立志稱爲行銷和技術兼備的人才，目前在ALPHA Camp愉快的玩耍中。"};
+    people_Winnie = @{@"Name" : @"Winnie Huang",
+                       @"Photo" : [UIImage imageNamed:@"photo_Winnie_Huang"],
+                       @"Description" : @"政大財政系，在Startup圈闖蕩的小朋友，從大四開始自學Web Development，是Rails的初學者，立志稱爲行銷和技術兼備的人才，目前在ALPHA Camp愉快的玩耍中。"};
+    people_David  = @{@"Name" : @"David Wang",
+                       @"Photo" : [UIImage imageNamed:@"photo_David_Wang"],
+                       @"Description" : @"政大財政系，在Startup圈闖蕩的小朋友，從大四開始自學Web Development，是Rails的初學者，立志稱爲行銷和技術兼備的人才，目前在ALPHA Camp愉快的玩耍中。"};
+    people_A_Ga = @{@"Name" : @"建嘉 龔",
+                       @"Photo" : [UIImage imageNamed:@"photo_建嘉"],
+                       @"Description" : @"政大財政系，在Startup圈闖蕩的小朋友，從大四開始自學Web Development，是Rails的初學者，立志稱爲行銷和技術兼備的人才，目前在ALPHA Camp愉快的玩耍中。"};
+    arrGoodStudents = @[
+                        people_Anthony,
+                        people_Abby,
+//                        people_Reinhardt,
+                        people_Amos_Chen,
+                        people_Winnie,
+                        people_David,
+                        people_A_Ga
+                        ];
+    arr = @[
+            arrTeamCoreMember,
+            arrTeacher,
+            arrGoodStudents
+            ];
     
     //手勢
     UISwipeGestureRecognizer *swipeLeftGR = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipe2Next)];
@@ -81,6 +154,11 @@
     swipeRightGR.delegate = self;
     [self.view addGestureRecognizer:swipeRightGR];
     
+    
+
+    
+    [self showInfo:changeNum withGroup:groupNum];
+    
 }
 - (void)swipe2Next {
     changeNum++;
@@ -88,9 +166,7 @@
         changeNum = 0;
     }
     
-    showPhoto.image = arrTeamCoreMember[changeNum][@"Photo"];
-    showName.text = arrTeamCoreMember[changeNum][@"Name"];
-    showDescription.text = arrTeamCoreMember[changeNum][@"Description"];
+    [self showInfo:changeNum withGroup:groupNum];
 }
 - (void)swipe2Prev {
     changeNum--;
@@ -98,9 +174,7 @@
         changeNum = [arrTeamCoreMember count] - 1;
     }
     
-    showPhoto.image = arrTeamCoreMember[changeNum][@"Photo"];
-    showName.text = arrTeamCoreMember[changeNum][@"Name"];
-    showDescription.text = arrTeamCoreMember[changeNum][@"Description"];
+    [self showInfo:changeNum withGroup:groupNum];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -113,9 +187,7 @@
         changeNum = 0;
     }
     
-    showPhoto.image = arrTeamCoreMember[changeNum][@"Photo"];
-    showName.text = arrTeamCoreMember[changeNum][@"Name"];
-    showDescription.text = arrTeamCoreMember[changeNum][@"Description"];
+    [self showInfo:changeNum withGroup:groupNum];
 }
 - (IBAction)btnPrev {
     changeNum--;
@@ -123,21 +195,32 @@
         changeNum = [arrTeamCoreMember count] - 1;
     }
     
-    showPhoto.image = arrTeamCoreMember[changeNum][@"Photo"];
-    showName.text = arrTeamCoreMember[changeNum][@"Name"];
-    showDescription.text = arrTeamCoreMember[changeNum][@"Description"];
+    [self showInfo:changeNum withGroup:groupNum];
+}
+- (void)showInfo:(int)changeNumber withGroup:(int)groupNumber {
+    
+    showPhoto.image = arr[groupNumber][changeNumber][@"Photo"];
+    showName.text = arr[groupNumber][changeNumber][@"Name"];
+    showDescription.text = arr[groupNumber][changeNumber][@"Description"];
 }
 
 - (IBAction)switchGroup {
     
     switch (segmentControl.selectedSegmentIndex) {
         case 0:
+            groupNum = 0;
             break;
         case 1:
+            groupNum = 1;
             break;
         case 2:
+            groupNum = 2;
             break;
     }
+    
+    changeNum = 0;
+    [self showInfo:changeNum withGroup:groupNum];
+    
 }
 
 /*
