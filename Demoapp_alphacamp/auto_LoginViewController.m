@@ -34,8 +34,6 @@
     btnLogin.backgroundColor = [UIColor redColor];
     [btnLogin setTitle:@"Login" forState:UIControlStateNormal];
     btnLogin.tintColor = [UIColor whiteColor];
-    btnLogin.enabled = 1;
-    btnLogin.userInteractionEnabled = 1;
     [btnLogin addTarget:self action:@selector(change2Next) forControlEvents:UIControlEventTouchUpInside];
     
     
@@ -65,9 +63,7 @@
 
 - (void)change2Next {
     
-//    NSLog(@"hello");
     if ([tfUsername.text isEqualToString:setUsername] && [tfPassword.text isEqualToString:setPassword]) {
-//        NSLog(@"ok");
         if (showUsernameWrong) {
             [showUsernameWrong  removeFromSuperview];
         }
@@ -96,10 +92,8 @@
         if (showBothWrong) {
             [showBothWrong  removeFromSuperview];
         }
-//        NSLog(@"password wrong");
     }
     else if (![tfUsername.text isEqualToString:setUsername] && [tfPassword.text isEqualToString:setPassword]) {
-//        NSLog(@"username wrong");
         if (!showUsernameWrong) {
             showUsernameWrong = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 273.0f, 320.0f, 21.0f)];
             showUsernameWrong.backgroundColor = [UIColor yellowColor];
@@ -116,9 +110,7 @@
         }
     }
     else {
-//        NSLog(@"both wrong");
         if (![showBothWrong isDescendantOfView:self.view]) {
-//            NSLog(@"ok");
             showBothWrong = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 273.0f, 320.0f, 21.0f)];
             showBothWrong.backgroundColor = [UIColor yellowColor];
             showBothWrong.tintColor = [UIColor whiteColor];

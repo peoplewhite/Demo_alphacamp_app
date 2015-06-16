@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 
-@interface auto_LoginViewController : ViewController
+@interface auto_LoginViewController : ViewController 
 {
      UITextField *tfUsername;
      UITextField *tfPassword;

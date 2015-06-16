@@ -27,15 +27,13 @@
     [self.view addSubview:imgViewLogo];
     
     //button
-    btnLogin = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    btnLogin.frame = CGRectMake(85.0f, 300.0f, 150.0f, 50.0f);
+    btnLogin = [[UIButton alloc] initWithFrame:CGRectMake(85.0f, 300.0f, 150.0f, 50.0f)];
+    btnLogin.layer.masksToBounds = YES;
+    btnLogin.layer.cornerRadius = 10.0f;
     btnLogin.backgroundColor = [UIColor redColor];
     [btnLogin setTitle:@"Login" forState:UIControlStateNormal];
     btnLogin.tintColor = [UIColor whiteColor];
-    btnLogin.enabled = 1;
-    btnLogin.userInteractionEnabled = 1;
-    [btnLogin addTarget:self action:@selector(someMethod) forControlEvents:UIControlEventTouchUpInside];
-//    btnLogin = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [btnLogin addTarget:self action:@selector(change2LoginVC) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btnLogin];
     
 }
@@ -45,7 +43,7 @@
     [super didReceiveMemoryWarning];
 }
 
--(void)someMethod
+-(void)change2LoginVC
 {
     [self performSegueWithIdentifier:@"change2LoginVC" sender:self];
 }

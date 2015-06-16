@@ -19,6 +19,7 @@
 		4FADEF501B2AD34500218351 /* auto_MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FADEF4F1B2AD34500218351 /* auto_MainViewController.m */; };
 		4FADEF541B2B08E200218351 /* auto_LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FADEF531B2B08E200218351 /* auto_LoginViewController.m */; };
 		4FADEF571B2B1FBE00218351 /* auto_UsernameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FADEF561B2B1FBE00218351 /* auto_UsernameViewController.m */; };
+		4FB17BE61B301EBC00F87651 /* Class_TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB17BE51B301EBC00F87651 /* Class_TableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		4FADEF531B2B08E200218351 /* auto_LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = auto_LoginViewController.m; sourceTree = "<group>"; };
 		4FADEF551B2B1FBE00218351 /* auto_UsernameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = auto_UsernameViewController.h; sourceTree = "<group>"; };
 		4FADEF561B2B1FBE00218351 /* auto_UsernameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = auto_UsernameViewController.m; sourceTree = "<group>"; };
+		4FB17BE41B301EBC00F87651 /* Class_TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Class_TableViewController.h; sourceTree = "<group>"; };
+		4FB17BE51B301EBC00F87651 /* Class_TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Class_TableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +102,8 @@
 				4FADEF511B2AD35600218351 /* auto_make */,
 				4F4C7A5B1B29932800590CF9 /* AppDelegate.h */,
 				4F4C7A5C1B29932800590CF9 /* AppDelegate.m */,
+				4FB17BE41B301EBC00F87651 /* Class_TableViewController.h */,
+				4FB17BE51B301EBC00F87651 /* Class_TableViewController.m */,
 				4F4C7A611B29932800590CF9 /* Main.storyboard */,
 				4F4C7A5E1B29932800590CF9 /* ViewController.h */,
 				4F4C7A5F1B29932800590CF9 /* ViewController.m */,
@@ -258,6 +263,7 @@
 				4FADEF541B2B08E200218351 /* auto_LoginViewController.m in Sources */,
 				4F4C7A821B29B3F100590CF9 /* UsernameViewController.m in Sources */,
 				4F4C7A5D1B29932800590CF9 /* AppDelegate.m in Sources */,
+				4FB17BE61B301EBC00F87651 /* Class_TableViewController.m in Sources */,
 				4F4C7A5A1B29932800590CF9 /* main.m in Sources */,
 				4FADEF571B2B1FBE00218351 /* auto_UsernameViewController.m in Sources */,
 			);

@@ -55,33 +55,34 @@
 
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender{
     
-    if ([self.tfUsername.text isEqual:strUsername] && [self.tfPassword.text isEqual:strPassword]) {
-        //登入成功
-        return 1;
-    }
-    else if ([self.tfUsername.text isEqual:strUsername] && ![self.tfPassword.text isEqual:strPassword]) {
-        //密碼錯誤
-        self.tip1.hidden = YES;
-        self.tip2.hidden = NO;
-        self.tip3.hidden = YES;
-        
-        return 0;
-    }
-    else if (![self.tfUsername.text isEqual:strUsername] && [self.tfPassword.text isEqual:strPassword]) {
-        //帳號錯誤
-        self.tip1.hidden = NO;
-        self.tip2.hidden = YES;
-        self.tip3.hidden = YES;
-        return 0;
-    }
-    else {
-        //兩者都錯
-        self.tip1.hidden = YES;
-        self.tip2.hidden = YES;
-        self.tip3.hidden = NO;
-        
-        return 0;
-    }
+    return 1;
+//    if ([self.tfUsername.text isEqual:strUsername] && [self.tfPassword.text isEqual:strPassword]) {
+//        //登入成功
+//        return 1;
+//    }
+//    else if ([self.tfUsername.text isEqual:strUsername] && ![self.tfPassword.text isEqual:strPassword]) {
+//        //密碼錯誤
+//        self.tip1.hidden = YES;
+//        self.tip2.hidden = NO;
+//        self.tip3.hidden = YES;
+//        
+//        return 0;
+//    }
+//    else if (![self.tfUsername.text isEqual:strUsername] && [self.tfPassword.text isEqual:strPassword]) {
+//        //帳號錯誤
+//        self.tip1.hidden = NO;
+//        self.tip2.hidden = YES;
+//        self.tip3.hidden = YES;
+//        return 0;
+//    }
+//    else {
+//        //兩者都錯
+//        self.tip1.hidden = YES;
+//        self.tip2.hidden = YES;
+//        self.tip3.hidden = NO;
+//        
+//        return 0;
+//    }
 }
 
 - (IBAction)test:(id)sender
