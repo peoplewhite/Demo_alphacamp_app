@@ -26,6 +26,8 @@
     NSDictionary *people_Benson;
     
     int changeNum;
+    
+    
 }
 
 @end
@@ -126,6 +128,17 @@
     showDescription.text = arrTeamCoreMember[changeNum][@"Description"];
 }
 
+- (IBAction)switchGroup {
+    
+    switch (segmentControl.selectedSegmentIndex) {
+        case 0:
+            break;
+        case 1:
+            break;
+        case 2:
+            break;
+    }
+}
 
 /*
 #pragma mark - Navigation

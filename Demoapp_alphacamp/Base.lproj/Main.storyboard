@@ -335,6 +335,9 @@
                                     <segment title="師資與顧問團"/>
                                     <segment title="BootCamp校友"/>
                                 </segments>
+                                <connections>
+                                    <action selector="switchGroup" destination="s9h-QF-jYl" eventType="valueChanged" id="0ru-pZ-BqF"/>
+                                </connections>
                             </segmentedControl>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="el5-Yj-DFf">
                                 <rect key="frame" x="85" y="125" width="150" height="150"/>
@@ -344,6 +347,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="9ma-we-NpA"/>
                     <connections>
+                        <outlet property="segmentControl" destination="2yb-TF-bCJ" id="fsz-Y4-1u3"/>
                         <outlet property="showDescription" destination="HWV-P9-EAs" id="xZf-Fd-ku6"/>
                         <outlet property="showName" destination="cd7-TF-mHm" id="ulA-TR-1RY"/>
                         <outlet property="showPhoto" destination="el5-Yj-DFf" id="Irm-hs-XMJ"/>

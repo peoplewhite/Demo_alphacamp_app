@@ -13,6 +13,8 @@
     IBOutlet UIImageView *showPhoto;
     IBOutlet UILabel *showName;
     IBOutlet UITextView *showDescription;
+    
+    IBOutlet UISegmentedControl *segmentControl;
 }
 
 
