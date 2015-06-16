@@ -66,8 +66,40 @@
     showName.text = arrTeamCoreMember[0][@"Name"];
     showDescription.text = arrTeamCoreMember[0][@"Description"];
     
+    
+    //手勢
+    UISwipeGestureRecognizer *swipeLeftGR = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipe2Next)];
+    swipeLeftGR.direction = UISwipeGestureRecognizerDirectionLeft;
+    swipeLeftGR.delegate = self;
+    [self.view addGestureRecognizer:swipeLeftGR];
+    
+    UISwipeGestureRecognizer *swipeRightGR = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipe2Prev)];
+    
+    swipeRightGR.direction = UISwipeGestureRecognizerDirectionRight;
+    swipeRightGR.delegate = self;
+    [self.view addGestureRecognizer:swipeRightGR];
+    
 }
-
+- (void)swipe2Next {
+    changeNum++;
+    if (changeNum == [arrTeamCoreMember count]) {
+        changeNum = 0;
+    }
+    
+    showPhoto.image = arrTeamCoreMember[changeNum][@"Photo"];
+    showName.text = arrTeamCoreMember[changeNum][@"Name"];
+    showDescription.text = arrTeamCoreMember[changeNum][@"Description"];
+}
+- (void)swipe2Prev {
+    changeNum--;
+    if (changeNum == -1) {
+        changeNum = [arrTeamCoreMember count] - 1;
+    }
+    
+    showPhoto.image = arrTeamCoreMember[changeNum][@"Photo"];
+    showName.text = arrTeamCoreMember[changeNum][@"Name"];
+    showDescription.text = arrTeamCoreMember[changeNum][@"Description"];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -93,6 +125,8 @@
     showName.text = arrTeamCoreMember[changeNum][@"Name"];
     showDescription.text = arrTeamCoreMember[changeNum][@"Description"];
 }
+
+
 /*
 #pragma mark - Navigation
 
