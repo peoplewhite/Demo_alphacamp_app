@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.labUsername.text = self.strShowUsername;
+//    self.labUsername.text = self.strShowUsername;
 }
 
 - (void)didReceiveMemoryWarning {

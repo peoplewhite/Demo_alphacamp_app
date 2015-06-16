@@ -43,8 +43,8 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    UsernameViewController *usernameVC = segue.destinationViewController;
-    usernameVC.strShowUsername = self.tfUsername.text;
+//    UsernameViewController *usernameVC = segue.destinationViewController;
+//    usernameVC.strShowUsername = self.tfUsername.text;
 }
 
 

@@ -154,9 +154,6 @@
     swipeRightGR.delegate = self;
     [self.view addGestureRecognizer:swipeRightGR];
     
-    
-
-    
     [self showInfo:changeNum withGroup:groupNum];
     
 }
@@ -198,7 +195,6 @@
     [self showInfo:changeNum withGroup:groupNum];
 }
 - (void)showInfo:(int)changeNumber withGroup:(int)groupNumber {
-    
     showPhoto.image = arr[groupNumber][changeNumber][@"Photo"];
     showName.text = arr[groupNumber][changeNumber][@"Name"];
     showDescription.text = arr[groupNumber][changeNumber][@"Description"];
@@ -206,21 +202,20 @@
 
 - (IBAction)switchGroup {
     
-    switch (segmentControl.selectedSegmentIndex) {
-        case 0:
-            groupNum = 0;
-            break;
-        case 1:
-            groupNum = 1;
-            break;
-        case 2:
-            groupNum = 2;
-            break;
-    }
-    
+//    switch (segmentControl.selectedSegmentIndex) {
+//        case 0:
+//            groupNum = 0;
+//            break;
+//        case 1:
+//            groupNum = 1;
+//            break;
+//        case 2:
+//            groupNum = 2;
+//            break;
+//    }
+    groupNum = segmentControl.selectedSegmentIndex;
     changeNum = 0;
     [self showInfo:changeNum withGroup:groupNum];
-    
 }
 
 /*
