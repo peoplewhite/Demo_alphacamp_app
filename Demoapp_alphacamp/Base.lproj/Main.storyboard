@@ -216,7 +216,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Event" id="rMX-ZI-euW"/>
+                    <tabBarItem key="tabBarItem" title="Event" image="Tabbar_item1" id="rMX-ZI-euW"/>
                     <navigationItem key="navigationItem" id="bEe-Qz-UyC"/>
                     <connections>
                         <outlet property="labUsername" destination="pUf-uM-d14" id="iay-XD-Fns"/>
@@ -459,6 +459,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Tabbar_item1" width="49" height="49"/>
         <image name="logo_alphacamp" width="213" height="58"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
