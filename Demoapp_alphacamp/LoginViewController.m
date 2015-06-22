@@ -38,13 +38,9 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (IBAction)login:(id)sender {
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-//    UsernameViewController *usernameVC = segue.destinationViewController;
-//    usernameVC.strShowUsername = self.tfUsername.text;
+- (IBAction)btnLogin:(id)sender {
+    
+    [self presentViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"meetPeopleVC"] animated:YES completion:nil];
 }
 
 

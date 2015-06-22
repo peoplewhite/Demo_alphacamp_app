@@ -7,8 +7,7 @@
 //
 
 #import "ViewController.h"
-
-@interface LoginViewController : ViewController
+@interface LoginViewController : ViewController <UIGestureRecognizerDelegate>
 
     
 
