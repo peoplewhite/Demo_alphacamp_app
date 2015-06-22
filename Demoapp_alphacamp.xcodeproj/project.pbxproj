@@ -22,6 +22,7 @@
 		4FB17BE61B301EBC00F87651 /* Class_TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB17BE51B301EBC00F87651 /* Class_TableViewController.m */; };
 		4FB17BE91B30291E00F87651 /* EntryAoubtACViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB17BE81B30291E00F87651 /* EntryAoubtACViewController.m */; };
 		4FB17BEC1B30370900F87651 /* peopleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB17BEB1B30370900F87651 /* peopleViewController.m */; };
+		4FBEAA991B36C5AE00827DB3 /* Class_2_TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FBEAA981B36C5AE00827DB3 /* Class_2_TableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,8 @@
 		4FB17BE81B30291E00F87651 /* EntryAoubtACViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryAoubtACViewController.m; sourceTree = "<group>"; };
 		4FB17BEA1B30370900F87651 /* peopleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = peopleViewController.h; sourceTree = "<group>"; };
 		4FB17BEB1B30370900F87651 /* peopleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = peopleViewController.m; sourceTree = "<group>"; };
+		4FBEAA971B36C5AE00827DB3 /* Class_2_TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Class_2_TableViewController.h; sourceTree = "<group>"; };
+		4FBEAA981B36C5AE00827DB3 /* Class_2_TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Class_2_TableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +114,8 @@
 				4FB17BE41B301EBC00F87651 /* Class_TableViewController.h */,
 				4FB17BE51B301EBC00F87651 /* Class_TableViewController.m */,
 				4F4C7A611B29932800590CF9 /* Main.storyboard */,
+				4FBEAA971B36C5AE00827DB3 /* Class_2_TableViewController.h */,
+				4FBEAA981B36C5AE00827DB3 /* Class_2_TableViewController.m */,
 				4FB17BEA1B30370900F87651 /* peopleViewController.h */,
 				4FB17BEB1B30370900F87651 /* peopleViewController.m */,
 				4FB17BE71B30291D00F87651 /* EntryAoubtACViewController.h */,
@@ -268,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F4C7A7F1B29B1A500590CF9 /* LoginViewController.m in Sources */,
+				4FBEAA991B36C5AE00827DB3 /* Class_2_TableViewController.m in Sources */,
 				4F4C7A601B29932800590CF9 /* ViewController.m in Sources */,
 				4FB17BEC1B30370900F87651 /* peopleViewController.m in Sources */,
 				4FADEF501B2AD34500218351 /* auto_MainViewController.m in Sources */,

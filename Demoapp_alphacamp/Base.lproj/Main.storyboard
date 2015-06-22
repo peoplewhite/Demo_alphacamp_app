@@ -126,9 +126,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghs-sv-Kyp">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghs-sv-Kyp">
                                 <rect key="frame" x="108" y="328" width="105" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="105" id="TYY-cQ-9zA"/>
+                                    <constraint firstAttribute="height" constant="30" id="alN-p3-yOO"/>
+                                </constraints>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Login">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -137,11 +141,21 @@
                                     <segue destination="vXZ-lx-hvc" kind="push" id="VBh-ox-Ltv"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo_alphacamp" translatesAutoresizingMaskIntoConstraints="NO" id="kjs-rL-R7O">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_alphacamp" translatesAutoresizingMaskIntoConstraints="NO" id="kjs-rL-R7O">
                                 <rect key="frame" x="47" y="146" width="227" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="227" id="3y0-Qt-g1g"/>
+                                    <constraint firstAttribute="height" constant="48" id="9gQ-la-qyf"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kjs-rL-R7O" firstAttribute="top" secondItem="niV-Bu-8ZG" secondAttribute="bottom" constant="82" id="DuO-Ya-418"/>
+                            <constraint firstAttribute="centerX" secondItem="ghs-sv-Kyp" secondAttribute="centerX" id="Sej-qr-RvV"/>
+                            <constraint firstAttribute="centerX" secondItem="kjs-rL-R7O" secondAttribute="centerX" id="TSa-uq-NkN"/>
+                            <constraint firstItem="ghs-sv-Kyp" firstAttribute="top" secondItem="kjs-rL-R7O" secondAttribute="bottom" constant="134" id="ZHR-5G-Gjt"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="PhW-Ye-wTz"/>
                 </viewController>
@@ -200,27 +214,9 @@
                     <view key="view" contentMode="scaleToFill" id="vVC-a5-oSm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello, " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ck1-Qc-aec" userLabel="GreetingWords">
-                                <rect key="frame" x="46" y="123" width="53" height="86"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="stranger" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pUf-uM-d14" userLabel="Username">
-                                <rect key="frame" x="107" y="149" width="213" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Event" image="Tabbar_item1" id="rMX-ZI-euW"/>
-                    <navigationItem key="navigationItem" id="bEe-Qz-UyC"/>
-                    <connections>
-                        <outlet property="labUsername" destination="pUf-uM-d14" id="iay-XD-Fns"/>
-                    </connections>
+                    <tabBarItem key="tabBarItem" title="Event" id="rMX-ZI-euW"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AA6-08-o6s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -248,10 +244,40 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Class" id="qiC-yX-ayk"/>
+                    <connections>
+                        <segue destination="sgc-Vr-HtG" kind="push" identifier="jump2Next" id="S3P-wj-8Ax"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sRY-Kh-8qS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2615" y="-133"/>
+            <point key="canvasLocation" x="2615" y="-67"/>
+        </scene>
+        <!--Class2 Table View Controller-->
+        <scene sceneID="Zb2-Nh-jBf">
+            <objects>
+                <tableViewController id="sgc-Vr-HtG" customClass="Class_2_TableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="kFc-mH-u0n">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="xmz-Eb-Yu9">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xmz-Eb-Yu9" id="2M5-jk-wRn">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="sgc-Vr-HtG" id="j0s-6e-u7V"/>
+                            <outlet property="delegate" destination="sgc-Vr-HtG" id="T17-T7-Spg"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="2aC-cW-vHY"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aIr-un-KJw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3103" y="-61"/>
         </scene>
         <!--Entry AoubtAC View Controller-->
         <scene sceneID="iHb-Tx-MAR">
@@ -334,13 +360,6 @@
                                     <action selector="btnPrev" destination="s9h-QF-jYl" eventType="touchUpInside" id="93G-fo-3YD"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HWV-P9-EAs">
-                                <rect key="frame" x="40" y="319" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="test" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cd7-TF-mHm">
                                 <rect key="frame" x="16" y="283" width="288" height="35"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
@@ -361,6 +380,13 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="el5-Yj-DFf">
                                 <rect key="frame" x="85" y="125" width="150" height="150"/>
                             </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HWV-P9-EAs">
+                                <rect key="frame" x="20" y="311" width="280" height="159"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -459,7 +485,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Tabbar_item1" width="49" height="49"/>
         <image name="logo_alphacamp" width="213" height="58"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

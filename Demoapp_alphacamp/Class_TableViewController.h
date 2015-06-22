@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Class_2_TableViewController.h"
 
 @interface Class_TableViewController : UITableViewController
 
