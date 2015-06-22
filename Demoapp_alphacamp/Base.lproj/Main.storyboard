@@ -505,7 +505,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="Qge-bx-EPb">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="G3G-MC-OaH" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabbarVC" automaticallyAdjustsScrollViewInsets="NO" id="G3G-MC-OaH" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="LE2-yt-thu"/>
                     <nil key="simulatedBottomBarMetrics"/>
@@ -526,7 +526,7 @@
         <!--AboutAC-->
         <scene sceneID="wK5-vq-cGN">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="X9i-Nh-swf" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="navi" automaticallyAdjustsScrollViewInsets="NO" id="X9i-Nh-swf" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="AboutAC" id="MWV-dz-jjm"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="N5u-by-6BE">

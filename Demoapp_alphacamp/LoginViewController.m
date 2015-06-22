@@ -40,7 +40,11 @@
 }
 - (IBAction)btnLogin:(id)sender {
     
-    [self presentViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"meetPeopleVC"] animated:YES completion:nil];
+//    UINavigationController *navi = [self.storyboard instantiateViewControllerWithIdentifier:@"navi"];
+//    [self presentViewController:navi animated:YES completion:nil];
+//    [self presentViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"meetPeopleVC"] animated:YES completion:nil];
+    [self presentViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"tabbarVC"] animated:YES completion:nil];
+    
 }
 
 
