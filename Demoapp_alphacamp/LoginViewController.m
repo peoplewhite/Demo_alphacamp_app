@@ -32,6 +32,9 @@
     
     [self.view addGestureRecognizer:tapGR];
     
+    
+    _btnLogin2.layer.cornerRadius = 8.0;
+    
 }
 
 - (void)didReceiveMemoryWarning {

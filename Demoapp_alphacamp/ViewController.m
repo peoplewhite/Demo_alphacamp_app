@@ -16,8 +16,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+   
     
-    
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+       _btnLogin.layer.cornerRadius = 8.0;//圓角
+
     
 }
 

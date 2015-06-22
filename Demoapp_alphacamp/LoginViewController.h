@@ -10,7 +10,7 @@
 @interface LoginViewController : ViewController <UIGestureRecognizerDelegate>
 
     
-
+@property IBOutlet UIButton *btnLogin2;
 
 @property IBOutlet UITextField *tfUsername;
 @property IBOutlet UITextField *tfPassword;

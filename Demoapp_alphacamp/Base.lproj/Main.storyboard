@@ -102,6 +102,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Login" id="Vhc-Lx-wZY"/>
                     <connections>
+                        <outlet property="btnLogin2" destination="T9I-Xo-OjC" id="4ig-MW-grK"/>
                         <outlet property="tfPassword" destination="s8C-wt-QZi" id="iwZ-LB-1lu"/>
                         <outlet property="tfUsername" destination="cdi-GS-P2T" id="Jbu-bI-Lmp"/>
                         <outlet property="tip1" destination="WmW-uK-emv" id="66A-XP-vFr"/>
@@ -157,6 +158,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="PhW-Ye-wTz"/>
+                    <connections>
+                        <outlet property="btnLogin" destination="ghs-sv-Kyp" id="nb1-T6-LFC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ctj-P6-Fub" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -243,9 +247,6 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Class" id="qiC-yX-ayk"/>
-                    <connections>
-                        <segue destination="sgc-Vr-HtG" kind="push" identifier="jump2Next" id="S3P-wj-8Ax"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sRY-Kh-8qS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -254,7 +255,7 @@
         <!--Class2 Table View Controller-->
         <scene sceneID="Zb2-Nh-jBf">
             <objects>
-                <tableViewController id="sgc-Vr-HtG" customClass="Class_2_TableViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="detailTVC" id="sgc-Vr-HtG" customClass="Class_2_TableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="kFc-mH-u0n">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -350,6 +351,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kVu-hc-ei0"/>
+                    <connections>
+                        <outlet property="btnMeetPeople" destination="KNc-bI-An5" id="S62-CJ-bsi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SKJ-Dp-WQ2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -358,7 +362,7 @@
         <!--People View Controller-->
         <scene sceneID="yvc-KS-RT8">
             <objects>
-                <viewController id="s9h-QF-jYl" customClass="peopleViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="peopleVC" id="s9h-QF-jYl" customClass="peopleViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vpV-qo-roa"/>
                         <viewControllerLayoutGuide type="bottom" id="ULg-c8-aXq"/>

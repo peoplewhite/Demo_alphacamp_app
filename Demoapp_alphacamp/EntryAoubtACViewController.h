@@ -9,5 +9,6 @@
 #import "ViewController.h"
 
 @interface EntryAoubtACViewController : ViewController
+@property (weak, nonatomic) IBOutlet UIButton *btnMeetPeople;
 
 @end

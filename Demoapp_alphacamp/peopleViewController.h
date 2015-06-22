@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 
-@interface peopleViewController : ViewController
+@interface peopleViewController : ViewController <UIGestureRecognizerDelegate>
 {
     IBOutlet UIImageView *showPhoto;
     IBOutlet UILabel *showName;

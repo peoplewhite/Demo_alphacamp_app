@@ -17,5 +17,7 @@
 //@property IBOutlet UITextField *uitfUsername;
 //@property IBOutlet UITextField *uitfPassword;
 
+@property IBOutlet UIButton *btnLogin;
+
 @end
 
