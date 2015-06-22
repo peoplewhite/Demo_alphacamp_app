@@ -39,8 +39,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="login:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ZBt-CL-OsX"/>
-                                    <segue destination="G3G-MC-OaH" kind="push" id="hrE-uV-WCz"/>
+                                    <action selector="btnLogin:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="VfQ-m5-hqB"/>
                                 </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username wrong" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WmW-uK-emv" userLabel="tips1">
@@ -282,7 +281,7 @@
         <!--Entry AoubtAC View Controller-->
         <scene sceneID="iHb-Tx-MAR">
             <objects>
-                <viewController id="gCZ-ii-IGV" customClass="EntryAoubtACViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="meetPeopleVC" id="gCZ-ii-IGV" customClass="EntryAoubtACViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BT8-oo-GuA"/>
                         <viewControllerLayoutGuide type="bottom" id="0Io-e0-IXm"/>
