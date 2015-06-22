@@ -62,7 +62,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    clickedNum = indexPath.row;
+    clickedNum = (int)indexPath.row;
     [self performSegueWithIdentifier:@"jump2Next" sender:self];
 }
 
