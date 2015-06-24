@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="cZx-Ot-fU7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="uaM-Sp-Mqs">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -108,11 +108,12 @@
                         <outlet property="tip1" destination="WmW-uK-emv" id="66A-XP-vFr"/>
                         <outlet property="tip2" destination="bLn-wI-HJY" id="taY-8b-nhQ"/>
                         <outlet property="tip3" destination="d6p-WP-JQw" id="xRB-C7-Ekb"/>
+                        <segue destination="G3G-MC-OaH" kind="modal" identifier="go2Tab" id="jYi-ar-aRV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1233" y="-462"/>
+            <point key="canvasLocation" x="1231" y="-892"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="R02-a9-VK5">
@@ -138,7 +139,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="push" id="VBh-ox-Ltv"/>
+                                    <action selector="btnLogin:" destination="uaM-Sp-Mqs" eventType="touchUpInside" id="afW-tu-XNj"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_alphacamp" translatesAutoresizingMaskIntoConstraints="NO" id="kjs-rL-R7O">
@@ -159,30 +160,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="PhW-Ye-wTz"/>
                     <connections>
-                        <outlet property="btnLogin" destination="ghs-sv-Kyp" id="nb1-T6-LFC"/>
+                        <segue destination="vXZ-lx-hvc" kind="modal" identifier="go2Login" id="MJc-KB-wf1"/>
+                        <segue destination="G3G-MC-OaH" kind="modal" identifier="autoLogin" id="DBL-Nd-dwf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ctj-P6-Fub" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="735" y="-462"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="cQb-6r-of9">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cZx-Ot-fU7" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="q0y-A1-mXR">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="uaM-Sp-Mqs" kind="relationship" relationship="rootViewController" id="7OW-Ao-PaV"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="faK-yV-ihw" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="215" y="-462"/>
         </scene>
         <!--Auto Main View Controller-->
         <scene sceneID="ytr-Pi-3Vw">
@@ -577,4 +561,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="DBL-Nd-dwf"/>
+    </inferredMetricsTieBreakers>
 </document>
