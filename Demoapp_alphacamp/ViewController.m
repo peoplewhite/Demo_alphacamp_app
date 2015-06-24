@@ -17,12 +17,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _manager = [AFHTTPRequestOperationManager manager];
-    [_manager POST:@"https://dojo.alphacamp.co/api/v1/login" parameters:@{@"email":@"shonshon7@gmail.com", @"password":@"qqpp1100", @"api_key":@"7c819379f329bc03ea4fcdb5f521831b5b920398"} success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"yes");
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"no");
-    }];
+    
+   
+    if (([[NSUserDefaults standardUserDefaults] objectForKey:@"thisUsername"] != nil) && ([[NSUserDefaults standardUserDefaults] objectForKey:@"thisPassword"] != nil)) {
+        _manager = [AFHTTPRequestOperationManager manager];
+        [_manager POST:@"https://dojo.alphacamp.co/api/v1/login"
+            parameters:@{
+                         @"email":[[NSUserDefaults standardUserDefaults] objectForKey:@"thisUsername"],
+                         @"password":[[NSUserDefaults standardUserDefaults] objectForKey:@"thisPassword"],
+                         @"api_key":@"7c819379f329bc03ea4fcdb5f521831b5b920398"}
+               success:^(AFHTTPRequestOperation *operation, id responseObject) {
+            NSLog(@"yes");
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            NSLog(@"no");
+        }];
+    }
+    else {
+        NSLog(@"nothing");
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated {
