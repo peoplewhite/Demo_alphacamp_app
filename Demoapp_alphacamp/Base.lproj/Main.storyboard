@@ -160,6 +160,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="PhW-Ye-wTz"/>
                     <connections>
+                        <outlet property="btnLogin" destination="ghs-sv-Kyp" id="m91-Kj-sfv"/>
                         <segue destination="vXZ-lx-hvc" kind="modal" identifier="go2Login" id="MJc-KB-wf1"/>
                         <segue destination="G3G-MC-OaH" kind="modal" identifier="autoLogin" id="DBL-Nd-dwf"/>
                     </connections>
