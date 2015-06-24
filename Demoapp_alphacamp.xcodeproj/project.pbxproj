@@ -23,6 +23,7 @@
 		4FB17BE91B30291E00F87651 /* EntryAoubtACViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB17BE81B30291E00F87651 /* EntryAoubtACViewController.m */; };
 		4FB17BEC1B30370900F87651 /* peopleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB17BEB1B30370900F87651 /* peopleViewController.m */; };
 		4FBEAA991B36C5AE00827DB3 /* Class_2_TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FBEAA981B36C5AE00827DB3 /* Class_2_TableViewController.m */; };
+		8A31804363B6ECD8759CC012 /* libPods-Demoapp_alphacamp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD00989625F4C7AD7EE07510 /* libPods-Demoapp_alphacamp.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,9 @@
 		4FB17BEB1B30370900F87651 /* peopleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = peopleViewController.m; sourceTree = "<group>"; };
 		4FBEAA971B36C5AE00827DB3 /* Class_2_TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Class_2_TableViewController.h; sourceTree = "<group>"; };
 		4FBEAA981B36C5AE00827DB3 /* Class_2_TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Class_2_TableViewController.m; sourceTree = "<group>"; };
+		9CB59EF47BBF0FBE2A14D582 /* Pods-Demoapp_alphacamp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demoapp_alphacamp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Demoapp_alphacamp/Pods-Demoapp_alphacamp.debug.xcconfig"; sourceTree = "<group>"; };
+		BD00989625F4C7AD7EE07510 /* libPods-Demoapp_alphacamp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Demoapp_alphacamp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC4603E1087E746AA7439BD9 /* Pods-Demoapp_alphacamp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demoapp_alphacamp.release.xcconfig"; path = "Pods/Target Support Files/Pods-Demoapp_alphacamp/Pods-Demoapp_alphacamp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A31804363B6ECD8759CC012 /* libPods-Demoapp_alphacamp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +98,8 @@
 				4F4C7A561B29932800590CF9 /* Demoapp_alphacamp */,
 				4F4C7A701B29932800590CF9 /* Demoapp_alphacampTests */,
 				4F4C7A551B29932800590CF9 /* Products */,
+				7A2224039A3C5C02AADF7CF8 /* Pods */,
+				73D15AE7F1D64CFDFD614939 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -172,6 +179,23 @@
 			name = auto_make;
 			sourceTree = "<group>";
 		};
+		73D15AE7F1D64CFDFD614939 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BD00989625F4C7AD7EE07510 /* libPods-Demoapp_alphacamp.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7A2224039A3C5C02AADF7CF8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9CB59EF47BBF0FBE2A14D582 /* Pods-Demoapp_alphacamp.debug.xcconfig */,
+				FC4603E1087E746AA7439BD9 /* Pods-Demoapp_alphacamp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -179,9 +203,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4F4C7A771B29932800590CF9 /* Build configuration list for PBXNativeTarget "Demoapp_alphacamp" */;
 			buildPhases = (
+				594EBE99D9C290663054E0CB /* Check Pods Manifest.lock */,
 				4F4C7A501B29932800590CF9 /* Sources */,
 				4F4C7A511B29932800590CF9 /* Frameworks */,
 				4F4C7A521B29932800590CF9 /* Resources */,
+				4392460650428D173B6CC3C2 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -266,6 +292,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4392460650428D173B6CC3C2 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Demoapp_alphacamp/Pods-Demoapp_alphacamp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		594EBE99D9C290663054E0CB /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4F4C7A501B29932800590CF9 /* Sources */ = {
@@ -407,6 +466,7 @@
 		};
 		4F4C7A781B29932800590CF9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CB59EF47BBF0FBE2A14D582 /* Pods-Demoapp_alphacamp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Demoapp_alphacamp/Info.plist;
@@ -417,6 +477,7 @@
 		};
 		4F4C7A791B29932800590CF9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC4603E1087E746AA7439BD9 /* Pods-Demoapp_alphacamp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Demoapp_alphacamp/Info.plist;
