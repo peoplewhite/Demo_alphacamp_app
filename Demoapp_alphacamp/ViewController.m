@@ -18,8 +18,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+//    [[NSUserDefaults standardUserDefaults] setValue:nil forKey:@"thisUsername"];
+//    [[NSUserDefaults standardUserDefaults] setValue:nil forKey:@"thisPassword"];
+//    [[NSUserDefaults standardUserDefaults] synchronize];
    
     if (([[NSUserDefaults standardUserDefaults] objectForKey:@"thisUsername"] != nil) && ([[NSUserDefaults standardUserDefaults] objectForKey:@"thisPassword"] != nil)) {
+        _btnLogin.hidden = 1;
         _manager = [AFHTTPRequestOperationManager manager];
         [_manager POST:@"https://dojo.alphacamp.co/api/v1/login"
             parameters:@{
@@ -33,6 +37,8 @@
         }];
     }
     else {
+        _btnLogin.hidden = 0;
+        
         NSLog(@"nothing");
     }
 }
