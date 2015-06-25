@@ -11,6 +11,8 @@
 
 @interface ViewController ()
 @property AFHTTPRequestOperationManager *manager;
+@property BOOL getResult;
+@property BOOL didAutoLogin;
 @end
 
 @implementation ViewController
@@ -23,42 +25,49 @@
 //    [[NSUserDefaults standardUserDefaults] synchronize];
     NSLog(@"vdl");
 
+    if (!_getResult) {
    
-//    if (([[NSUserDefaults standardUserDefaults] objectForKey:@"thisUsername"] != nil) && ([[NSUserDefaults standardUserDefaults] objectForKey:@"thisPassword"] != nil)) {
-//        
-//        NSLog(@"2");
-//        UIActivityIndicatorView *indicatorView = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
-//        indicatorView.center = self.view.center;
-//        [self.view addSubview:indicatorView];
-//        [indicatorView startAnimating];
-//        
-//        _btnLogin.hidden = 1;
-//        _manager = [AFHTTPRequestOperationManager manager];
-//        [_manager POST:@"https://dojo.alphacamp.co/api/v1/login"
-//            parameters:@{
-//                         @"email":[[NSUserDefaults standardUserDefaults] objectForKey:@"thisUsername"],
-//                         @"password":[[NSUserDefaults standardUserDefaults] objectForKey:@"thisPassword"],
-//                         @"api_key":@"7c819379f329bc03ea4fcdb5f521831b5b920398"}
-//               success:^(AFHTTPRequestOperation *operation, id responseObject) {
-//                   //自動登入成功
-//                   NSLog(@"3");
-//                   [indicatorView stopAnimating];
-//                   [self performSegueWithIdentifier:@"autoLogin" sender:self];
-//                   
-//                   NSLog(@"res  %@", responseObject);
-//                   
-//                   
-//        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-//                    //自動登入失敗
-//            NSLog(@"4");
-//                    [indicatorView stopAnimating];
-//        }];
-//    }
-//    else {
-//        _btnLogin.hidden = 0;
-//        
-//        NSLog(@"nothing");
-//    }
+        if (([[NSUserDefaults standardUserDefaults] objectForKey:@"thisUsername"] != nil) && ([[NSUserDefaults standardUserDefaults] objectForKey:@"thisPassword"] != nil)) {
+            
+            NSLog(@"2");
+            UIActivityIndicatorView *indicatorView = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+            indicatorView.center = self.view.center;
+            [self.view addSubview:indicatorView];
+            [indicatorView startAnimating];
+            
+            _btnLogin.hidden = 1;
+            _manager = [AFHTTPRequestOperationManager manager];
+            [_manager POST:@"https://dojo.alphacamp.co/api/v1/login"
+                parameters:@{
+                             @"email":[[NSUserDefaults standardUserDefaults] objectForKey:@"thisUsername"],
+                             @"password":[[NSUserDefaults standardUserDefaults] objectForKey:@"thisPassword"],
+                             @"api_key":@"7c819379f329bc03ea4fcdb5f521831b5b920398"}
+                   success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                       //自動登入成功
+                       NSLog(@"3");
+                       [indicatorView stopAnimating];
+                       [self performSegueWithIdentifier:@"autoLogin" sender:self];
+                       
+                       _didAutoLogin = 1;
+//                       NSLog(@"res  %@", responseObject);
+                       
+                       
+            } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                        //自動登入失敗
+                NSLog(@"4");
+                        [indicatorView stopAnimating];
+                _didAutoLogin = 0;
+            }];
+        }
+        else {
+            _btnLogin.hidden = 0;
+            _didAutoLogin = 0;
+            
+            NSLog(@"nothing");
+        }
+        
+        _getResult = 1;
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -67,8 +76,12 @@
 }
 - (void)viewDidAppear:(BOOL)animated {
     NSLog(@"vda");
-//       [self performSegueWithIdentifier:@"autoLogin" sender:self];
 //    [self dismissViewControllerAnimated:nil completion:nil];
+    if (_didAutoLogin) {
+       [self performSegueWithIdentifier:@"autoLogin" sender:self];
+        _didAutoLogin = 0;
+    }
+    
 }
 
 
