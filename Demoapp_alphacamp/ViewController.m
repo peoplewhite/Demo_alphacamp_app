@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import <Parse/Parse.h>
 @interface ViewController ()
 
 @end
@@ -16,8 +16,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-   
-    
 }
 
 - (void)viewWillAppear:(BOOL)animated {

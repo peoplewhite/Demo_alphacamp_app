@@ -9,6 +9,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-Demoapp_alphacamp-Bolts.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Demoapp_alphacamp-Parse.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Demoapp_alphacamp.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>47735964317389710E7B734F</key>
+		<key>1DC70F34AC1E2C80EAF0F940</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6ADFF63208910B306CDC2305</key>
+		<key>A51AE99DEA977C799F0F4A16</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B460B5F05BF06F0FBCE6FEC4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D505CBC7EE3984E6DF1192AC</key>
 		<dict>
 			<key>primary</key>
 			<true/>

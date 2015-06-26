@@ -3,6 +3,7 @@
 
 target 'Demoapp_alphacamp' do
 pod "AFNetworking", "~> 2.0"
+pod "Parse"
 end
 
 
