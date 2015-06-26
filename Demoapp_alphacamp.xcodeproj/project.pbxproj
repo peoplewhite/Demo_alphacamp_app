@@ -15,9 +15,6 @@
 		4F4C7A681B29932800590CF9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F4C7A661B29932800590CF9 /* LaunchScreen.xib */; };
 		4F4C7A7F1B29B1A500590CF9 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F4C7A7E1B29B1A500590CF9 /* LoginViewController.m */; };
 		4F4C7A821B29B3F100590CF9 /* UsernameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F4C7A811B29B3F100590CF9 /* UsernameViewController.m */; };
-		4FADEF501B2AD34500218351 /* auto_MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FADEF4F1B2AD34500218351 /* auto_MainViewController.m */; };
-		4FADEF541B2B08E200218351 /* auto_LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FADEF531B2B08E200218351 /* auto_LoginViewController.m */; };
-		4FADEF571B2B1FBE00218351 /* auto_UsernameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FADEF561B2B1FBE00218351 /* auto_UsernameViewController.m */; };
 		4FB17BE61B301EBC00F87651 /* Class_TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB17BE51B301EBC00F87651 /* Class_TableViewController.m */; };
 		4FB17BE91B30291E00F87651 /* EntryAoubtACViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB17BE81B30291E00F87651 /* EntryAoubtACViewController.m */; };
 		4FB17BEC1B30370900F87651 /* peopleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB17BEB1B30370900F87651 /* peopleViewController.m */; };
@@ -42,12 +39,6 @@
 		4F4C7A7E1B29B1A500590CF9 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		4F4C7A801B29B3F100590CF9 /* UsernameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsernameViewController.h; sourceTree = "<group>"; };
 		4F4C7A811B29B3F100590CF9 /* UsernameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsernameViewController.m; sourceTree = "<group>"; };
-		4FADEF4E1B2AD34500218351 /* auto_MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = auto_MainViewController.h; sourceTree = "<group>"; };
-		4FADEF4F1B2AD34500218351 /* auto_MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = auto_MainViewController.m; sourceTree = "<group>"; };
-		4FADEF521B2B08E200218351 /* auto_LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = auto_LoginViewController.h; sourceTree = "<group>"; };
-		4FADEF531B2B08E200218351 /* auto_LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = auto_LoginViewController.m; sourceTree = "<group>"; };
-		4FADEF551B2B1FBE00218351 /* auto_UsernameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = auto_UsernameViewController.h; sourceTree = "<group>"; };
-		4FADEF561B2B1FBE00218351 /* auto_UsernameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = auto_UsernameViewController.m; sourceTree = "<group>"; };
 		4FB17BE41B301EBC00F87651 /* Class_TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Class_TableViewController.h; sourceTree = "<group>"; };
 		4FB17BE51B301EBC00F87651 /* Class_TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Class_TableViewController.m; sourceTree = "<group>"; };
 		4FB17BE71B30291D00F87651 /* EntryAoubtACViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryAoubtACViewController.h; sourceTree = "<group>"; };
@@ -95,7 +86,6 @@
 		4F4C7A561B29932800590CF9 /* Demoapp_alphacamp */ = {
 			isa = PBXGroup;
 			children = (
-				4FADEF511B2AD35600218351 /* auto_make */,
 				4F4C7A5B1B29932800590CF9 /* AppDelegate.h */,
 				4F4C7A5C1B29932800590CF9 /* AppDelegate.m */,
 				4FB17BE41B301EBC00F87651 /* Class_TableViewController.h */,
@@ -144,19 +134,6 @@
 				4F4C7A721B29932800590CF9 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		4FADEF511B2AD35600218351 /* auto_make */ = {
-			isa = PBXGroup;
-			children = (
-				4FADEF4E1B2AD34500218351 /* auto_MainViewController.h */,
-				4FADEF4F1B2AD34500218351 /* auto_MainViewController.m */,
-				4FADEF521B2B08E200218351 /* auto_LoginViewController.h */,
-				4FADEF531B2B08E200218351 /* auto_LoginViewController.m */,
-				4FADEF551B2B1FBE00218351 /* auto_UsernameViewController.h */,
-				4FADEF561B2B1FBE00218351 /* auto_UsernameViewController.m */,
-			);
-			name = auto_make;
 			sourceTree = "<group>";
 		};
 		73D15AE7F1D64CFDFD614939 /* Frameworks */ = {
@@ -285,14 +262,11 @@
 				4FBEAA991B36C5AE00827DB3 /* Class_2_TableViewController.m in Sources */,
 				4F4C7A601B29932800590CF9 /* ViewController.m in Sources */,
 				4FB17BEC1B30370900F87651 /* peopleViewController.m in Sources */,
-				4FADEF501B2AD34500218351 /* auto_MainViewController.m in Sources */,
 				4FB17BE91B30291E00F87651 /* EntryAoubtACViewController.m in Sources */,
-				4FADEF541B2B08E200218351 /* auto_LoginViewController.m in Sources */,
 				4F4C7A821B29B3F100590CF9 /* UsernameViewController.m in Sources */,
 				4F4C7A5D1B29932800590CF9 /* AppDelegate.m in Sources */,
 				4FB17BE61B301EBC00F87651 /* Class_TableViewController.m in Sources */,
 				4F4C7A5A1B29932800590CF9 /* main.m in Sources */,
-				4FADEF571B2B1FBE00218351 /* auto_UsernameViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
