@@ -14,8 +14,5 @@
 
 @property IBOutlet UITextField *tfUsername;
 @property IBOutlet UITextField *tfPassword;
-@property IBOutlet UILabel *tip1;
-@property IBOutlet UILabel *tip2;
-@property IBOutlet UILabel *tip3;
 
 @end

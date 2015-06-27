@@ -34,12 +34,6 @@
 }
 - (void)viewDidAppear:(BOOL)animated {
     NSLog(@"vda");
-//    if (_didAutoLogin) {
-//       [self performSegueWithIdentifier:@"autoLogin" sender:self];
-//        _didAutoLogin = 0;
-//    }
-    
-//    if (!_getResult) {
     if ([[NSUserDefaults standardUserDefaults] objectForKey:@"isAutoLogin"] != nil) {
         NSLog(@"enter");
         
@@ -63,14 +57,8 @@
                        //自動登入成功
                        NSLog(@"3");
                        [indicatorView stopAnimating];
-
-                       
                        [self performSegueWithIdentifier:@"autoLogin" sender:self];
-                       
                        _didAutoLogin = 1;
-                       //                       NSLog(@"res  %@", responseObject);
-                       
-                       
                    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                        //自動登入失敗
                        NSLog(@"4");
@@ -85,9 +73,6 @@
             
             NSLog(@"nothing");
         }
-        
-//        _getResult = 1;
-        
     }
 }
 
