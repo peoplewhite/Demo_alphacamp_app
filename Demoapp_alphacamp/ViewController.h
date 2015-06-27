@@ -9,15 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
-{
-    NSString *strUsername;
-    NSString *strPassword;
-}
-
-//@property IBOutlet UITextField *uitfUsername;
-//@property IBOutlet UITextField *uitfPassword;
-
 @property IBOutlet UIButton *btnLogin;
-
 @end
 

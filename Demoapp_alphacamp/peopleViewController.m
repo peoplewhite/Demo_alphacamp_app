@@ -168,7 +168,7 @@
 - (void)swipe2Prev {
     changeNum--;
     if (changeNum == -1) {
-        changeNum = [arrTeamCoreMember count] - 1;
+        changeNum = (int)[arrTeamCoreMember count] - 1;
     }
     
     [self showInfo:changeNum withGroup:groupNum];
@@ -189,7 +189,7 @@
 - (IBAction)btnPrev {
     changeNum--;
     if (changeNum == -1) {
-        changeNum = [arrTeamCoreMember count] - 1;
+        changeNum = (int)[arrTeamCoreMember count] - 1;
     }
     
     [self showInfo:changeNum withGroup:groupNum];
@@ -213,7 +213,7 @@
 //            groupNum = 2;
 //            break;
 //    }
-    groupNum = segmentControl.selectedSegmentIndex;
+    groupNum = (int)segmentControl.selectedSegmentIndex;
     changeNum = 0;
     [self showInfo:changeNum withGroup:groupNum];
 }

@@ -17,6 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 //    self.labUsername.text = self.strShowUsername;
+    NSLog(@"123 ");
 }
 
 - (void)didReceiveMemoryWarning {
