@@ -21,8 +21,8 @@
     [super viewDidLoad];
 //    [[NSUserDefaults standardUserDefaults] setValue:@"shonshon7@gmail.com" forKey:@"thisUsername"];
 //    [[NSUserDefaults standardUserDefaults] setValue:@"qqpp1100" forKey:@"thisPassword"];
-    [[NSUserDefaults standardUserDefaults] setValue:nil forKey:@"isAutoLogin"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
+//    [[NSUserDefaults standardUserDefaults] setValue:nil forKey:@"isAutoLogin"];
+//    [[NSUserDefaults standardUserDefaults] synchronize];
     NSLog(@"vdl");
 }
 
