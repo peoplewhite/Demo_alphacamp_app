@@ -8,9 +8,11 @@
 
 #import "LoginViewController.h"
 #import "UsernameViewController.h"
+#import <AFNetworking.h>
 
 @interface LoginViewController ()
-
+@property AFHTTPRequestOperationManager *manager;
+@property UIActivityIndicatorView *indicatorView;
 @end
 
 @implementation LoginViewController
@@ -35,6 +37,13 @@
     
     _btnLogin2.layer.cornerRadius = 8.0;
     
+    
+    
+    _indicatorView = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    _indicatorView.center = self.view.center;
+    [self.view addSubview:_indicatorView];
+    [_indicatorView startAnimating];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -42,12 +51,29 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)btnLogin:(id)sender {
-    
-//    UINavigationController *navi = [self.storyboard instantiateViewControllerWithIdentifier:@"navi"];
-//    [self presentViewController:navi animated:YES completion:nil];
-//    [self presentViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"meetPeopleVC"] animated:YES completion:nil];
-    [self presentViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"tabbarVC"] animated:YES completion:nil];
-    
+    _manager = [AFHTTPRequestOperationManager manager];
+    [_manager POST:@"https://dojo.alphacamp.co/api/v1/login"
+        parameters:@{
+                     @"email":_tfUsername.text,
+                     @"password":_tfPassword.text,
+                     @"api_key":@"7c819379f329bc03ea4fcdb5f521831b5b920398"}
+           success:^(AFHTTPRequestOperation *operation, id responseObject) {
+               //登入成功
+               [_indicatorView stopAnimating];
+               
+               //換頁過去
+//               [self presentViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"tabbarVC"] animated:YES completion:nil];
+//
+               [self performSegueWithIdentifier:@"go2Tab" sender:self];
+               
+//               _didAutoLogin = 1;
+               
+               
+           } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+               //登入失敗
+               [_indicatorView stopAnimating];
+//               _didAutoLogin = 0;
+           }];
 }
 
 
