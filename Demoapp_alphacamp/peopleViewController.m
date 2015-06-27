@@ -7,6 +7,7 @@
 //
 
 #import "peopleViewController.h"
+#import "GV.h"
 
 @interface peopleViewController ()
 {
@@ -218,7 +219,30 @@
     [self showInfo:changeNum withGroup:groupNum];
 }
 - (IBAction)btnLogout:(id)sender {
-    NSLog(@"hi");
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"再次確認"
+                                                                   message:@"您確定要登出嗎？"
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *ok = [UIAlertAction actionWithTitle:@"Logout" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        //按登出要做的動作
+        
+        [[NSUserDefaults standardUserDefaults] setValue:@NO forKey:@"isAutoLogin"];
+        [[NSUserDefaults standardUserDefaults] setValue:nil forKey:@"thisUsername"];
+        [[NSUserDefaults standardUserDefaults] setValue:nil forKey:@"thisPassword"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        isPassLogin = @"NO";
+        
+        [self performSegueWithIdentifier:@"logout" sender:self];
+        
+    }];
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [alert dismissViewControllerAnimated:YES completion:nil];
+    }];
+    
+    [alert addAction:ok];
+    [alert addAction:cancel];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 /*

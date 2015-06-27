@@ -274,7 +274,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SKJ-Dp-WQ2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3147" y="-1385"/>
+            <point key="canvasLocation" x="3091" y="-2013"/>
         </scene>
         <!--People View Controller-->
         <scene sceneID="yvc-KS-RT8">
@@ -382,11 +382,12 @@
                         <outlet property="showDescription" destination="HWV-P9-EAs" id="xZf-Fd-ku6"/>
                         <outlet property="showName" destination="cd7-TF-mHm" id="ulA-TR-1RY"/>
                         <outlet property="showPhoto" destination="el5-Yj-DFf" id="Irm-hs-XMJ"/>
+                        <segue destination="uaM-Sp-Mqs" kind="modal" identifier="logout" id="MwK-W0-Yw3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yuu-gD-HDt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3566" y="-1385"/>
+            <point key="canvasLocation" x="3606" y="-2013"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Qge-bx-EPb">
@@ -426,7 +427,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kFg-eS-kE4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2615" y="-1385"/>
+            <point key="canvasLocation" x="2631" y="-2013"/>
         </scene>
         <!--Class-->
         <scene sceneID="Ecp-4A-U8M">
