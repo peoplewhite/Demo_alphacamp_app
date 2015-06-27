@@ -9,6 +9,7 @@
 #import "LoginViewController.h"
 #import "UsernameViewController.h"
 #import <AFNetworking.h>
+#import "GV.h"
 
 @interface LoginViewController ()
 @property AFHTTPRequestOperationManager *manager;
@@ -60,6 +61,7 @@
                [[NSUserDefaults standardUserDefaults] setValue:_tfUsername.text forKey:@"thisUsername"];
                [[NSUserDefaults standardUserDefaults] setValue:_tfPassword.text forKey:@"thisPassword"];
                [[NSUserDefaults standardUserDefaults] synchronize];
+               isPassLogin = @"YES";
                //換頁過去
                [self performSegueWithIdentifier:@"go2Tab" sender:self];
            } failure:^(AFHTTPRequestOperation *operation, NSError *error) {

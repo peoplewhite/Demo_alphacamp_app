@@ -217,6 +217,9 @@
     changeNum = 0;
     [self showInfo:changeNum withGroup:groupNum];
 }
+- (IBAction)btnLogout:(id)sender {
+    NSLog(@"hi");
+}
 
 /*
 #pragma mark - Navigation

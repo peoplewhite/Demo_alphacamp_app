@@ -370,7 +370,13 @@
                             <constraint firstItem="ULg-c8-aXq" firstAttribute="top" secondItem="f4y-LY-5hw" secondAttribute="bottom" constant="11" id="vn2-9n-khQ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="9ma-we-NpA"/>
+                    <navigationItem key="navigationItem" id="9ma-we-NpA">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="Lka-I0-I9W">
+                            <connections>
+                                <action selector="btnLogout:" destination="s9h-QF-jYl" id="h3q-hb-CwH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="segmentControl" destination="2yb-TF-bCJ" id="fsz-Y4-1u3"/>
                         <outlet property="showDescription" destination="HWV-P9-EAs" id="xZf-Fd-ku6"/>
