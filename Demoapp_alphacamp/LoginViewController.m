@@ -54,6 +54,12 @@
                //登入成功
                
                [_indicatorView stopAnimating];
+               
+               //將登入資訊存入本地端
+               [[NSUserDefaults standardUserDefaults] setValue:@YES forKey:@"isAutoLogin"];
+               [[NSUserDefaults standardUserDefaults] setValue:_tfUsername.text forKey:@"thisUsername"];
+               [[NSUserDefaults standardUserDefaults] setValue:_tfPassword.text forKey:@"thisPassword"];
+               [[NSUserDefaults standardUserDefaults] synchronize];
                //換頁過去
                [self performSegueWithIdentifier:@"go2Tab" sender:self];
            } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
