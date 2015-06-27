@@ -11,7 +11,7 @@
 
 @interface ViewController ()
 @property AFHTTPRequestOperationManager *manager;
-@property BOOL getResult;
+//@property BOOL getResult;
 @property BOOL didAutoLogin;
 @end
 
@@ -25,8 +25,25 @@
 //    [[NSUserDefaults standardUserDefaults] synchronize];
     NSLog(@"vdl");
 
-    if (!_getResult) {
-   
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    _btnLogin.layer.cornerRadius = 8.0;//圓角
+    NSLog(@"vwa");
+}
+- (void)viewDidAppear:(BOOL)animated {
+    NSLog(@"vda");
+//    if (_didAutoLogin) {
+//       [self performSegueWithIdentifier:@"autoLogin" sender:self];
+//        _didAutoLogin = 0;
+//    }
+    
+//    if (!_getResult) {
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:@"isAutoLogin"] != nil) {
+        NSLog(@"enter");
+        
+        
         if (([[NSUserDefaults standardUserDefaults] objectForKey:@"thisUsername"] != nil) && ([[NSUserDefaults standardUserDefaults] objectForKey:@"thisPassword"] != nil)) {
             
             NSLog(@"2");
@@ -46,42 +63,32 @@
                        //自動登入成功
                        NSLog(@"3");
                        [indicatorView stopAnimating];
+
+                       
                        [self performSegueWithIdentifier:@"autoLogin" sender:self];
                        
                        _didAutoLogin = 1;
-//                       NSLog(@"res  %@", responseObject);
+                       //                       NSLog(@"res  %@", responseObject);
                        
                        
-            } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-                        //自動登入失敗
-                NSLog(@"4");
-                        [indicatorView stopAnimating];
-                _didAutoLogin = 0;
-            }];
+                   } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                       //自動登入失敗
+                       NSLog(@"4");
+                       [indicatorView stopAnimating];
+                       _didAutoLogin = 0;
+                   }];
         }
         else {
+            //手機沒存資料，需手動登入
             _btnLogin.hidden = 0;
             _didAutoLogin = 0;
             
             NSLog(@"nothing");
         }
         
-        _getResult = 1;
+//        _getResult = 1;
+        
     }
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-       _btnLogin.layer.cornerRadius = 8.0;//圓角
-    NSLog(@"vwa");
-}
-- (void)viewDidAppear:(BOOL)animated {
-    NSLog(@"vda");
-//    [self dismissViewControllerAnimated:nil completion:nil];
-    if (_didAutoLogin) {
-       [self performSegueWithIdentifier:@"autoLogin" sender:self];
-        _didAutoLogin = 0;
-    }
-    
 }
 
 
