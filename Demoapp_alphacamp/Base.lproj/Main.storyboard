@@ -41,62 +41,17 @@
                                     <action selector="btnLogin:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="VfQ-m5-hqB"/>
                                 </connections>
                             </button>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username wrong" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WmW-uK-emv" userLabel="tips1">
-                                <rect key="frame" x="0.0" y="273" width="320" height="21"/>
-                                <color key="backgroundColor" red="0.97647058819999999" green="0.83921568629999999" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="3oA-OA-FXa"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password wrong" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLn-wI-HJY" userLabel="tips2">
-                                <rect key="frame" x="0.0" y="273" width="320" height="21"/>
-                                <color key="backgroundColor" red="0.97647058819999999" green="0.83921568629999999" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="42l-ee-ARu"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username &amp; Password Both Wrong" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d6p-WP-JQw" userLabel="tips3">
-                                <rect key="frame" x="66" y="256" width="189" height="55"/>
-                                <color key="backgroundColor" red="0.97647058819999999" green="0.83921568629999999" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="F06-XB-mEX"/>
-                                    <constraint firstAttribute="width" constant="189" id="N66-es-etU"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="d6p-WP-JQw" secondAttribute="centerX" id="12U-C4-Y2P"/>
                             <constraint firstAttribute="trailing" secondItem="cdi-GS-P2T" secondAttribute="trailing" constant="40" id="3RV-RM-NOe"/>
-                            <constraint firstAttribute="centerY" secondItem="bLn-wI-HJY" secondAttribute="centerY" id="B9S-vd-hgK"/>
-                            <constraint firstItem="WmW-uK-emv" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" id="F3h-7w-5Xu"/>
-                            <constraint firstItem="bLn-wI-HJY" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Ffg-WB-Ccj"/>
-                            <constraint firstItem="WmW-uK-emv" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="HuH-j6-ZGR"/>
-                            <constraint firstAttribute="centerX" secondItem="WmW-uK-emv" secondAttribute="centerX" id="JZo-u4-jh2"/>
                             <constraint firstItem="s8C-wt-QZi" firstAttribute="top" secondItem="cdi-GS-P2T" secondAttribute="bottom" constant="20" id="JoA-33-Zgl"/>
                             <constraint firstItem="s8C-wt-QZi" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="40" id="KKm-7t-Rle"/>
-                            <constraint firstAttribute="trailing" secondItem="WmW-uK-emv" secondAttribute="trailing" id="PIT-yd-sSj"/>
                             <constraint firstAttribute="centerX" secondItem="T9I-Xo-OjC" secondAttribute="centerX" id="PRW-w3-Bcc"/>
                             <constraint firstItem="cdi-GS-P2T" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="40" id="PVv-K3-BIa"/>
-                            <constraint firstAttribute="centerX" secondItem="d6p-WP-JQw" secondAttribute="centerX" id="RQV-IO-0Ux"/>
                             <constraint firstAttribute="trailing" secondItem="s8C-wt-QZi" secondAttribute="trailing" constant="40" id="RTL-gl-Mao"/>
                             <constraint firstItem="cdi-GS-P2T" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="84" id="Tpz-oo-IC0"/>
-                            <constraint firstAttribute="centerY" secondItem="d6p-WP-JQw" secondAttribute="centerY" id="WDs-fp-Peq"/>
-                            <constraint firstAttribute="centerX" secondItem="bLn-wI-HJY" secondAttribute="centerX" id="XEB-cd-DVh"/>
-                            <constraint firstAttribute="trailing" secondItem="bLn-wI-HJY" secondAttribute="trailing" id="Xmv-EL-Qg3"/>
-                            <constraint firstAttribute="width" secondItem="bLn-wI-HJY" secondAttribute="width" id="f6T-z7-taS"/>
                             <constraint firstItem="T9I-Xo-OjC" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="184" id="hqb-Tg-2gl"/>
-                            <constraint firstAttribute="centerY" secondItem="WmW-uK-emv" secondAttribute="centerY" id="lrN-W7-U7V"/>
-                            <constraint firstAttribute="centerY" secondItem="d6p-WP-JQw" secondAttribute="centerY" id="t8T-9k-aEA"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Login" id="Vhc-Lx-wZY"/>
@@ -104,9 +59,6 @@
                         <outlet property="btnLogin2" destination="T9I-Xo-OjC" id="4ig-MW-grK"/>
                         <outlet property="tfPassword" destination="s8C-wt-QZi" id="iwZ-LB-1lu"/>
                         <outlet property="tfUsername" destination="cdi-GS-P2T" id="Jbu-bI-Lmp"/>
-                        <outlet property="tip1" destination="WmW-uK-emv" id="66A-XP-vFr"/>
-                        <outlet property="tip2" destination="bLn-wI-HJY" id="taY-8b-nhQ"/>
-                        <outlet property="tip3" destination="d6p-WP-JQw" id="xRB-C7-Ekb"/>
                         <segue destination="G3G-MC-OaH" kind="modal" identifier="go2Tab" id="jYi-ar-aRV"/>
                     </connections>
                 </viewController>

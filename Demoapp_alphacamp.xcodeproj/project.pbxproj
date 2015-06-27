@@ -19,6 +19,7 @@
 		4FB17BE91B30291E00F87651 /* EntryAoubtACViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB17BE81B30291E00F87651 /* EntryAoubtACViewController.m */; };
 		4FB17BEC1B30370900F87651 /* peopleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB17BEB1B30370900F87651 /* peopleViewController.m */; };
 		4FBEAA991B36C5AE00827DB3 /* Class_2_TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FBEAA981B36C5AE00827DB3 /* Class_2_TableViewController.m */; };
+		4FD34F361B3E91B9003247FA /* GV.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FD34F351B3E91B9003247FA /* GV.m */; };
 		8A31804363B6ECD8759CC012 /* libPods-Demoapp_alphacamp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD00989625F4C7AD7EE07510 /* libPods-Demoapp_alphacamp.a */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,8 @@
 		4FB17BEB1B30370900F87651 /* peopleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = peopleViewController.m; sourceTree = "<group>"; };
 		4FBEAA971B36C5AE00827DB3 /* Class_2_TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Class_2_TableViewController.h; sourceTree = "<group>"; };
 		4FBEAA981B36C5AE00827DB3 /* Class_2_TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Class_2_TableViewController.m; sourceTree = "<group>"; };
+		4FD34F341B3E91AA003247FA /* GV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GV.h; path = ../GV.h; sourceTree = "<group>"; };
+		4FD34F351B3E91B9003247FA /* GV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GV.m; sourceTree = "<group>"; };
 		9CB59EF47BBF0FBE2A14D582 /* Pods-Demoapp_alphacamp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demoapp_alphacamp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Demoapp_alphacamp/Pods-Demoapp_alphacamp.debug.xcconfig"; sourceTree = "<group>"; };
 		BD00989625F4C7AD7EE07510 /* libPods-Demoapp_alphacamp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Demoapp_alphacamp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC4603E1087E746AA7439BD9 /* Pods-Demoapp_alphacamp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demoapp_alphacamp.release.xcconfig"; path = "Pods/Target Support Files/Pods-Demoapp_alphacamp/Pods-Demoapp_alphacamp.release.xcconfig"; sourceTree = "<group>"; };
@@ -103,6 +106,8 @@
 				4F4C7A7E1B29B1A500590CF9 /* LoginViewController.m */,
 				4F4C7A801B29B3F100590CF9 /* UsernameViewController.h */,
 				4F4C7A811B29B3F100590CF9 /* UsernameViewController.m */,
+				4FD34F341B3E91AA003247FA /* GV.h */,
+				4FD34F351B3E91B9003247FA /* GV.m */,
 				4F4C7A641B29932800590CF9 /* Images.xcassets */,
 				4F4C7A661B29932800590CF9 /* LaunchScreen.xib */,
 				4F4C7A571B29932800590CF9 /* Supporting Files */,
@@ -264,6 +269,7 @@
 				4FB17BEC1B30370900F87651 /* peopleViewController.m in Sources */,
 				4FB17BE91B30291E00F87651 /* EntryAoubtACViewController.m in Sources */,
 				4F4C7A821B29B3F100590CF9 /* UsernameViewController.m in Sources */,
+				4FD34F361B3E91B9003247FA /* GV.m in Sources */,
 				4F4C7A5D1B29932800590CF9 /* AppDelegate.m in Sources */,
 				4FB17BE61B301EBC00F87651 /* Class_TableViewController.m in Sources */,
 				4F4C7A5A1B29932800590CF9 /* main.m in Sources */,
