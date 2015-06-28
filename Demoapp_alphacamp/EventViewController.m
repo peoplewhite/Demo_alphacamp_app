@@ -7,6 +7,7 @@
 //
 
 #import "EventViewController.h"
+#import <Parse/Parse.h>
 
 @interface EventViewController ()
 
@@ -16,7 +17,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"here");
+    
+//    PFObject *pfObj = [PFObject objectWithClassName:@"Event"];
+    PFQuery *pfQ = [PFQuery queryWithClassName:@"Event"];
+    [pfQ findObjectsInBackgroundWithBlock:^(NSArray *arr, NSError *error) {
+        if (!error) {
+            NSLog(@"%@", arr);
+        }
+        else {
+            NSLog(@"nothing");
+        }
+    }];
+//    [pfObj fi]
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -30,7 +43,6 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 3;
 }
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
