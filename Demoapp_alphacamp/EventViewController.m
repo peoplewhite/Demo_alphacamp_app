@@ -96,7 +96,7 @@
     UILabel *lbTitle = (UILabel *)[cell viewWithTag:102];
     UILabel *lbDate = (UILabel *)[cell viewWithTag:103];
     UITextView *textView = (UITextView *)[cell viewWithTag:104];
-//    UIButton *btnURL = (UIButton *)[cell viewWithTag:105];
+    UIButton *btnURL = (UIButton *)[cell viewWithTag:105];
     
     lbTitle.text = _arrAllEvents[indexPath.row][@"eventName"];
     lbDate.text = _arrAllEvents[indexPath.row][@"dateString"];
@@ -108,6 +108,8 @@
     else {
         imageView.image = nil;
     }
+    
+    btnURL.layer.cornerRadius = 8.0;
     
     return cell;
 }
