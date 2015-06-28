@@ -8,9 +8,6 @@
 
 #import "ViewController.h"
 
-@interface UsernameViewController : ViewController
-
-@property NSString *strShowUsername;
-@property IBOutlet  UILabel *labUsername;
+@interface EventViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @end
